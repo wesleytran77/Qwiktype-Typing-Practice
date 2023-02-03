@@ -5,6 +5,7 @@
     font-family: 'Roboto Mono', sans-serif;
     user-select: none;
     text-align: center;
+    border: 1px solid red;
 }
 
 :root{
@@ -226,5 +227,9 @@ body{
 
     .tab{
         display: none;
+    }
+
+    .input{
+        visibility: hidden;
     }
 }
