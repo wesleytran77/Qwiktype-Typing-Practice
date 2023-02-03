@@ -234,12 +234,6 @@ body{
     .tab{
         display: none;
     }
-
-    .input{
-        width: 100%;
-        height: 1rem;
-        color: white;
-    }
 }
 
 
