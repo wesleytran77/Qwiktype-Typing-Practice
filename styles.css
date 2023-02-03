@@ -211,6 +211,10 @@ body{
     fill: var(--sub-color);
 }
 
+.wrap:hover{
+    fill: var(--accent-color);
+}
+
 
 @media screen and (max-width: 800px) {
     .logo{
