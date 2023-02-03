@@ -206,7 +206,10 @@ body{
     font-size: 2.3rem;
 }
 
-
+.wrap{
+    margin: 1vw;
+    fill: var(--sub-color);
+}
 
 
 @media screen and (max-width: 800px) {
@@ -227,8 +230,5 @@ body{
     .tab{
         display: none;
     }
-
-    .input{
-        visibility: hidden;
-    }
 }
+
