@@ -22,7 +22,7 @@ function isMobile() {
     } else {
         mobile= false
     }
-    alert(mobile + " line 25 testing ")
+    //alert(mobile + " line 25 testing ")
 }
   
 
@@ -79,6 +79,7 @@ function startTimer(){
 
 //create text
 function createText(){
+    isMobile()
     words.innerHTML= ""
     if (wordLength == "medium"){
         while (words.innerHTML.length < 150){ 
