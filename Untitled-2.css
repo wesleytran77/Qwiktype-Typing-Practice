@@ -349,13 +349,11 @@ footer svg{
 
     /* remove blur for ios */
     .words{
-        font-size: 1.5rem;
-        filter: blur(5px);
-        line-height: 2rem;
+        filter: none;
     }
     
     .wordsDiv:focus .words{
-        filter: blur(0); 
+        filter: none; 
     }
 }
 
