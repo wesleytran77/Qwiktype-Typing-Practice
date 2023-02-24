@@ -184,8 +184,12 @@ function reset(){
     startedTimer= false //allows for timer to be run again and reset time
     
    
-    wordsDiv.focus() //removes blur
-    //iosKeyboard.focus()
+    if (mobile == true){
+        iosKeyboard.focus() //this is for mobile so this brings up keyboard
+    }
+    else{
+        wordsDiv.focus() //sets focus on when they refresh screen 
+    }
 }
 
 
@@ -275,6 +279,11 @@ document.querySelectorAll(".timeSelect").forEach(setting => {
         setting.classList.add("picked")
     })
 })
+
+
+
+
+
 
 
 
