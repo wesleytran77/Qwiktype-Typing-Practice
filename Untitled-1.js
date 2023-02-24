@@ -2,6 +2,7 @@ const words= document.querySelector(".words")
 const mediumWords = ["admire", "beloved", "charity", "deserve", "efforts", "freedom", "genuine", "healing", "indulge", "justice", "kindred", "laughed", "massive", "natural", "organic", "passion", "quality", "respect", "sincere", "tactics", "unique", "valuable", "wealthy", "xenial", "youthful", "zealous", "awesome", "balance", "courage", "dynamic", "embrace", "fantasy", "grateful", "hustler", "innovate", "jovial", "kingdom", "lifetime", "momentum", "nurtured", "optimism", "perceive", "quirky", "radiant", "sensual", "thrifty", "ultimate", "vibrant", "willing"]
 const shortWords = ["dog", "cat", "pen", "cup", "book", "tree", "song", "desk", "bird", "fork", "code", "bike", "sock", "moon", "car", "idea", "lake", "film", "card", "sand", "lamp", "key", "rain", "fire", "leaf", "pear", "fish", "love", "game", "ship", "frog", "city", "door", "hill", "baby", "ball", "bear", "time", "park", "duck", "milk", "star", "idea", "food", "team", "road", "goal", "idea", "rose"]
 const longWords = ["ambitious", "beautiful", "convenient", "delicious", "enthusiasm", "fascinated", "generosity", "harmonious", "impressive", "knowledgeable", "luxurious", "magnificent", "neuroscience", "optimistic", "particular", "quintessence", "resilience", "satisfaction", "tremendous", "unbelievable", "vocabulary", "wonderful", "xylophone", "youthfulness", "zoologist", "accomplish", "breathtaking", "confidently", "determination", "established", "fantastically", "gracefully", "historically", "inspiration", "juxtaposition", "knowledgeable", "legitimately", "metaphorical", "narratively", "opportunist", "philosopher", "quantitative", "revolutionary", "superiority", "transparency", "understanding", "vivacious", "wittiness", "xenophobic"]
+const iosKeyboard= document.querySelector(".iosKeyboard")
 const wordsDiv= document.querySelector(".wordsDiv")
 const timer= document.querySelector(".timer")
 //variable for statistics calculations
@@ -89,6 +90,7 @@ function createText(){
 //creates spans for every letter 
 function createSpans(){
     wordsDiv.focus() //sets focus on when they refresh screen 
+    iosKeyboard.focus() //this is for mobile so this brings up keyboard
     words.innerHTML.split("").forEach(character =>{
         var characterSpan= document.createElement("span")
         characterSpan.innerText= character
@@ -159,6 +161,7 @@ function reset(){
     clearInterval(interval)
     startedTimer= false //allows for timer to be run again and reset time
     wordsDiv.focus() //removes blur
+    iosKeyboard.focus()
 }
 
 
@@ -174,6 +177,7 @@ var primaryColor = null
 var textSecondary= null
 color.addEventListener("click", function(){
     wordsDiv.focus() //keep it focused, ready to type
+    iosKeyboard.focus()
     if (counter == 1){
         counter ++ 
         //dark mode
@@ -244,13 +248,10 @@ document.querySelectorAll(".timeSelect").forEach(setting => {
 
 
 
-// wpm formula = totalCorrect/ 5 / .5 //gives Words per MINUTE
 
-// so if we do 30 second test we should 2x the WPM there
 
-// if we do 15sec test we should 4x the WPM
+    
 
-// //implement then decide if keep or not 
 
 
     
