@@ -14,6 +14,18 @@ const timeSelect= document.querySelectorAll(".timeSelect")
 var topWPM = 0
 
 
+//checks if the user is on mobile
+var mobile = false
+function isMobile() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        mobile = true
+    } else {
+        mobile= false
+    }
+    alert(mobile + " line 25 testing ")
+}
+  
+
 
 
 //call function once page loads
@@ -89,8 +101,17 @@ function createText(){
 
 //creates spans for every letter 
 function createSpans(){
-    wordsDiv.focus() //sets focus on when they refresh screen 
-    iosKeyboard.focus() //this is for mobile so this brings up keyboard
+
+    if (mobile == true){
+        iosKeyboard.focus() //this is for mobile so this brings up keyboard
+    }
+    else{
+        wordsDiv.focus() //sets focus on when they refresh screen 
+    }
+
+
+    // wordsDiv.focus() //sets focus on when they refresh screen 
+    // iosKeyboard.focus() //this is for mobile so this brings up keyboard
     words.innerHTML.split("").forEach(character =>{
         var characterSpan= document.createElement("span")
         characterSpan.innerText= character
@@ -160,8 +181,10 @@ function reset(){
     totalPressed= 0        
     clearInterval(interval)
     startedTimer= false //allows for timer to be run again and reset time
+    
+   
     wordsDiv.focus() //removes blur
-    iosKeyboard.focus()
+    //iosKeyboard.focus()
 }
 
 
@@ -176,8 +199,14 @@ var counter= 1
 var primaryColor = null
 var textSecondary= null
 color.addEventListener("click", function(){
-    wordsDiv.focus() //keep it focused, ready to type
-    iosKeyboard.focus()
+    if (mobile == true){
+        iosKeyboard.focus() //this is for mobile so this brings up keyboard
+    }
+    else{
+        wordsDiv.focus() //sets focus on when they refresh screen 
+    }
+    //wordsDiv.focus() //keep it focused, ready to type
+    //iosKeyboard.focus()
     if (counter == 1){
         counter ++ 
         //dark mode
@@ -245,6 +274,10 @@ document.querySelectorAll(".timeSelect").forEach(setting => {
         setting.classList.add("picked")
     })
 })
+
+
+
+
 
 
 
