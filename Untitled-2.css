@@ -432,9 +432,7 @@ footer svg{
         padding-bottom: 0;
         margin-bottom: 2rem;
     }    
-    .home p{
-        margin: 0;
-    }    
+      
     .words{
         margin-bottom: 1rem;
         font-size: 1.3rem;
@@ -451,7 +449,10 @@ footer svg{
        
     .words{
         margin-bottom: 1rem;
-        /* font-size: 1.3rem; */
+    }
+
+    footer{
+        padding: 1rem;
     }
 
 }
@@ -460,7 +461,6 @@ footer svg{
 @media (max-width: 800px) and (max-height: 700px) and (min-width: 600px){
     .navbar{
         padding-bottom: 0;
-        /* margin-bottom: 5rem; */
     }    
       
     .words{
@@ -471,8 +471,23 @@ footer svg{
 }
 
 
+@media (max-height: 550px){
+    .words{
+        font-size: 1.2rem;
+        margin-bottom: 0;
+    }
 
-/* accomodate all screen size from 300px and up */
+    footer{
+        padding: 1rem;
+    }
+
+  
+   
+
+
+}
+
+
 
 
 
