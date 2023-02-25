@@ -237,6 +237,7 @@ footer svg{
     font-size: 1.3rem;
     position: absolute;
     color: var(--primaryColor);
+    display: block;
 }
 
 .wordsDiv{
@@ -351,9 +352,16 @@ footer svg{
     .words{
         filter: none;
     }
-    
-    .wordsDiv:focus .words{
-        filter: none; 
+    .focus{
+        display: none;
+    }
+
+    .stat h3, .stat h2{
+        font-size: 1.2rem;
+    }
+
+    .stat h1{
+        font-size: 1rem;
     }
 }
 
