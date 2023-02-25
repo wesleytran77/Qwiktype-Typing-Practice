@@ -49,8 +49,6 @@ function startTimer(){
                 document.querySelector(".statsBox").style.display= "flex"
                 document.querySelector(".wordsDiv").style.display= "none"
                 document.querySelector(".timerDiv").style.display= "none"
-                //calculating stats
-                //var newWPM= document.querySelector(".wpm").innerHTML= Math.floor((totalCorrect / 5) / 0.5) //calculates WPM 
                 document.querySelector(".acc").innerHTML= Math.floor((totalCorrect / totalPressed) * 100) + "%";
                 document.querySelector(".test").innerHTML= timeSelected + "s" + " " + wordLength
 
@@ -110,9 +108,6 @@ function createSpans(){
         wordsDiv.focus() //sets focus on when they refresh screen 
     }
 
-
-    // wordsDiv.focus() //sets focus on when they refresh screen 
-    // iosKeyboard.focus() //this is for mobile so this brings up keyboard
     words.innerHTML.split("").forEach(character =>{
         var characterSpan= document.createElement("span")
         characterSpan.innerText= character
@@ -135,7 +130,7 @@ function cursorPlacement(){
 document.addEventListener("keydown", function(){
     startTimer()
 
-    if (event.key.toLowerCase() == words.querySelector(".blink").innerText){
+    if (event.key.toLowerCase().trim() == words.querySelector(".blink").innerText.trim()){
         
         words.querySelector(".blink").classList.add("correct")
         words.querySelector(".blink").classList.remove("none", "blink", "incorrect")
@@ -177,7 +172,6 @@ function reset(){
     document.querySelector(".statsBox").style.display= "none"
     document.querySelector(".wordsDiv").style.display= "flex"
     document.querySelector(".timerDiv").style.display= "flex"        
-    //createText()
     totalCorrect= 0
     totalPressed= 0        
     clearInterval(interval)
@@ -210,8 +204,6 @@ color.addEventListener("click", function(){
     else{
         wordsDiv.focus() //sets focus on when they refresh screen 
     }
-    //wordsDiv.focus() //keep it focused, ready to type
-    //iosKeyboard.focus()
     if (counter == 1){
         counter ++ 
         //dark mode
