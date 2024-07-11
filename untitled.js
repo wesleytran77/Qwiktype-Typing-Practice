@@ -372,6 +372,17 @@ document.addEventListener('keydown', (event) => {
     }
 })
 
+//handles new test button
+const resetButton= document.querySelector(".reset")
+
+resetButton.addEventListener("click", function(){
+    newTest()
+    const primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--primaryColor').trim();
+    logoSvg.style.fill = primaryColor      
+    // const logo = document.querySelector('.logo');
+    logo.style.color = primaryColor
+})
+
 
 function newTest(){
     //creates the new test
@@ -497,6 +508,12 @@ function timerSettings(){
         secthirty.classList.remove("highlight")
     }//jump here
 }
+
+
+
+
+
+
 
 
 
