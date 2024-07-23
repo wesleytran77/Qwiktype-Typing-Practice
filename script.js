@@ -3,8 +3,6 @@ window.onload = function(){
     timerSettings()
     color()
     createText()
-
-    inputField.focus()
 }
 
 var currentTest= ""
@@ -605,6 +603,11 @@ function timerSettings(){
 document.addEventListener("click", function(){
     inputField.focus()
 })
+
+
+
+
+
 
 
 
