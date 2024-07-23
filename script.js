@@ -3,6 +3,8 @@ window.onload = function(){
     timerSettings()
     color()
     createText()
+
+    inputField.focus()
 }
 
 var currentTest= ""
