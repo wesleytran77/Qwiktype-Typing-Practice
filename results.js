@@ -136,9 +136,9 @@ function color(){
         const favicon16 = document.getElementById('favicon16');
         const appleFavi= document.getElementById('apple');
         const favicon32= document.getElementById('favicon32');
-        favicon16.setAttribute('href', 'assets/img/favicon-16x16.png');
-        appleFavi.setAttribute('href', 'assets/img/apple-touch-icon.png');
-        favicon32.setAttribute('href', 'assets/img/favicon-32x32.png');
+        favicon16.setAttribute('href', 'favicon-16x16.png');
+        appleFavi.setAttribute('href', 'apple-touch-icon.png');
+        favicon32.setAttribute('href', 'favicon-32x32.png');
     }
 
     else{  
@@ -154,9 +154,9 @@ function color(){
         const favicon16 = document.getElementById('favicon16');
         const appleFavi= document.getElementById('apple');
         const favicon32= document.getElementById('favicon32');
-        favicon16.setAttribute('href', 'assets/img/favicon16.png');
-        appleFavi.setAttribute('href', 'assets/img/apple.png');
-        favicon32.setAttribute('href', 'assets/img/favicon32.png');
+        favicon16.setAttribute('href', 'favicon16.png');
+        appleFavi.setAttribute('href', 'apple.png');
+        favicon32.setAttribute('href', 'favicon32.png');
     }
     calculateStats()
 }
