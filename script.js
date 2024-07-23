@@ -596,7 +596,10 @@ function timerSettings(){
     }//jump here
 }
 
+
 //focus for mobile devices to bring up keyboard
+const inputField= document.querySelector(".inputField")
+
 document.addEventListener("click", function(){
     inputField.focus()
 })
