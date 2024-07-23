@@ -602,6 +602,9 @@ function timerSettings(){
 }
 
 
+document.addEventListener("click", function(){
+    inputField.focus()
+})
 
 
 
