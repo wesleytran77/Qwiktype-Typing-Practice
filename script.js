@@ -7,6 +7,8 @@ window.onload = function(){
 
 var currentTest= ""
 var repeatTest= ""
+const inputField= document.querySelector(".inputField")
+
 
 
 if (localStorage.getItem('repeatTest') != null){
@@ -97,6 +99,7 @@ function easeInOutCubic(t, b, c, d) {
 }
 
 function start(){
+    inputField.focus()
     const primaryColor= rootStyles.getPropertyValue("--primaryColor") //get the color updated so it can reflect the correct color, bc interval does not allow changes it seals in the interval settings
     timer.style.color = primaryColor
     //counts down timer 
@@ -595,6 +598,16 @@ function timerSettings(){
         secthirty.classList.remove("highlight")
     }//jump here
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
