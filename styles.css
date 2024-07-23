@@ -446,6 +446,23 @@ body {
     box-shadow: inset 3px 0 0 0 var(--textPrimary);
 }
 
+
+
+
+
+.inputField{
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px;
+    height: 200px;
+    background-color: var(--bg-color);
+}
+
+
+
 /* Media query for smaller screens */
 @media (max-width: 768px) {
     .midsection{
