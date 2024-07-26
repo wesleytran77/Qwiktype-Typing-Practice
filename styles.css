@@ -46,21 +46,6 @@ body {
     flex-wrap: wrap;
 }
 
-.inputField{
-    position: absolute;
-    left: -9999px;
-    opacity: 0;
-    border: none;
-    background: none;
-    outline: none;
-    overflow: hidden;
-    transform: translate(-50%, -50%);
-    width: 1px;
-    height: 1px;
-    background-color: white;
-    color: none;
-}
-
 .settingsbox {
     fill: var(--textSecondary);
     border-radius: 15px;
@@ -89,6 +74,14 @@ body {
 
 .logo {
     margin-bottom: 1rem;
+}
+
+.youtubeLink{
+    text-decoration: underline;
+    color: black;
+    color: var(--bg-color);
+    font-size: 0.85rem;
+    margin-left: 10px;
 }
 
 .cursor{
